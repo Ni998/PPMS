@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56BB2B10-5C69-4B39-B7C9-F68C9FA210B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.Logiphix.PPMS</RootNamespace>
+    <AssemblyName>com.Logiphix.PPMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ChildWindowHelper.xaml.cs">
+      <DependentUpon>ChildWindowHelper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ExecCommand.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="UserControls\UCCreditFuelSales.xaml.cs">
+      <DependentUpon>UCCreditFuelSales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCDailyCashRegister.xaml.cs">
+      <DependentUpon>UCDailyCashRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEmployee.xaml.cs">
+      <DependentUpon>UCEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCHome.xaml.cs">
+      <DependentUpon>UCHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCLogin.xaml.cs">
+      <DependentUpon>UCLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCLubricant.xaml.cs">
+      <DependentUpon>UCLubricant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCNozzle.xaml.cs">
+      <DependentUpon>UCNozzle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCNozzleSale.xaml.cs">
+      <DependentUpon>UCNozzleSale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPack.xaml.cs">
+      <DependentUpon>UCPack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCProducts.xaml.cs">
+      <DependentUpon>UCProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTank.xaml.cs">
+      <DependentUpon>UCTank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DriverViewModel.cs" />
+    <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Page Include="ChildWindowHelper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UCCreditFuelSales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCDailyCashRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCLubricant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCNozzle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCNozzleSale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCPack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCTank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.Logiphix.BusinessApplication\com.Logiphix.BusinessApplication.csproj">
+      <Project>{9DF159CE-3FBA-4214-AACC-BD925DB16BF4}</Project>
+      <Name>com.Logiphix.BusinessApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Employees_messenger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Home_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Nozzle_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DCR_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Tank_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CreditCard_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Lubricant_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SplashScreen_Nozzle.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
