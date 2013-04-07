@@ -28,6 +28,20 @@ namespace com.Logiphix.PPMS.ViewModel
             } 
         }
 
+        List<Designations> desigLST;
+        public List<Designations> DesigLST
+        {
+            get
+            {
+                return desigLST;
+            }
+            set
+            {
+                desigLST = value;
+                NotifyPropertyChanged("DesigLST");
+            }
+        }
+
         string firstName;
         public string FirstName 
         {
