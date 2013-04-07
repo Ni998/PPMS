@@ -173,19 +173,19 @@ namespace com.Logiphix.PPMS.ViewModel
        
         public void ExecuteResetCommand(object parameter)
         {
-            MessageBox.Show("Executing Save");
+            MessageBox.Show("Executing Reset");
         }
 
         
         public void ExecuteCancelCommand(object parameter)
         {
-            MessageBox.Show("Executing Save");
+            MessageBox.Show("Executing Cancel");
         }
 
         
         public void ExecuteDeleteCommand(object parameter)
         {
-            MessageBox.Show("Executing Save");
+            MessageBox.Show("Executing Delete");
         }
         
 
