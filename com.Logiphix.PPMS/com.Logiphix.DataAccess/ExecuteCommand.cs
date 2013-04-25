@@ -78,7 +78,7 @@ namespace com.Logiphix.DataAccess
         /// <returns></returns>
         static public int ExecuteNonQuery(String _queryStr, List<DBParameters> dbParm)
         {
-            OdbcConnection _conn = DBConnector.OpenConnection();
+            OdbcConnection _conn = DBConnector.GetConnection();
 
             if (_conn.State != ConnectionState.Open)
             {
@@ -107,7 +107,7 @@ namespace com.Logiphix.DataAccess
         /// <returns></returns>
         static public Object ExecuteScalar(String _queryStr, List<DBParameters> dbParm)
         {
-            OdbcConnection _conn = DBConnector.OpenConnection();
+            OdbcConnection _conn = DBConnector.GetConnection();
 
             if (_conn.State != ConnectionState.Open)
             {
@@ -136,7 +136,7 @@ namespace com.Logiphix.DataAccess
         /// <returns></returns>
         static public DataTable ExecuteSelect(String _queryStr, List<DBParameters> dbParm)
         {
-            OdbcConnection _conn = DBConnector.OpenConnection();
+            OdbcConnection _conn = DBConnector.GetConnection();
 
             if (_conn.State != ConnectionState.Open)
             {
@@ -163,7 +163,7 @@ namespace com.Logiphix.DataAccess
 
         static public DataTable ExecuteStringQuery(String _queryStr)
         {
-            OdbcConnection _conn = DBConnector.OpenConnection();
+            OdbcConnection _conn = DBConnector.GetConnection();
 
             if (_conn.State != ConnectionState.Open)
             {

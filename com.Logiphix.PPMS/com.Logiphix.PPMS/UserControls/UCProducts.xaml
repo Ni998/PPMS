@@ -67,10 +67,10 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Row="0" Grid.Column="0" Content="Save"/>
-                    <Button Grid.Row="0" Grid.Column="1" Content="Reset"/>
-                    <Button Grid.Row="0" Grid.Column="2" Content="Cancel"/>
-                    <Button Grid.Row="0" Grid.Column="3" Content="Delete"/>
+                    <Button Grid.Row="0" Grid.Column="0" Content="Save" Command="{Binding Path=CommandSave, Mode= OneWay}"/>
+                    <Button Grid.Row="0" Grid.Column="1" Content="Reset" Command="{Binding Path=CommandReset, Mode= OneWay}"/>
+                    <Button Grid.Row="0" Grid.Column="2" Content="Cancel" Command="{Binding Path=CommandCancel, Mode= OneWay}"/>
+                    <Button Grid.Row="0" Grid.Column="3" Content="Delete" Command="{Binding Path=CommandDelete, Mode= OneWay}"/>
 
 
                 </Grid>

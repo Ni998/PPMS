@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using com.Logiphix.PPMS.ViewModel;
-using System.Threading;
+
 
 namespace com.Logiphix.PPMS
 {
@@ -26,11 +26,11 @@ namespace com.Logiphix.PPMS
         {
             SplashScreen splash = new SplashScreen("..\\Images\\SplashScreen_Nozzle.jpg");
             splash.Show(true);
-            Thread.Sleep(2500);
-            splash.Show(false);
-
-            InitializeComponent();
             dContext = new DriverViewModel();
+            dContext.InitApplication();
+            splash.Show(false);
+            InitializeComponent();
+            
         }
 
         
@@ -45,6 +45,8 @@ namespace com.Logiphix.PPMS
         {
             dContext.CreateChildWindow();
             dContext.ChildWindow.Title = "New Employee";
+            dContext.ChildWindow.Height = 500;
+            dContext.ChildWindow.Width = 800;
             dContext.ChildWindow.ReloadDockPanel(new UserControls.UCEmployee());
             dContext.ChildWindow.Show();
         }
@@ -53,6 +55,8 @@ namespace com.Logiphix.PPMS
         {
             dContext.CreateChildWindow();
             dContext.ChildWindow.Title = "New Nozzle";
+            dContext.ChildWindow.Height = 500;
+            dContext.ChildWindow.Width = 800;
             dContext.ChildWindow.ReloadDockPanel(new UserControls.UCNozzle());
             dContext.ChildWindow.Show();
         }
@@ -61,6 +65,8 @@ namespace com.Logiphix.PPMS
         {
             dContext.CreateChildWindow();
             dContext.ChildWindow.Title = "New Tank";
+            dContext.ChildWindow.Height = 500;
+            dContext.ChildWindow.Width = 800;
             dContext.ChildWindow.ReloadDockPanel(new UserControls.UCTank());
             dContext.ChildWindow.Show();
         }
@@ -69,6 +75,8 @@ namespace com.Logiphix.PPMS
         {
             dContext.CreateChildWindow();
             dContext.ChildWindow.Title = "New Product";
+            dContext.ChildWindow.Height = 500;
+            dContext.ChildWindow.Width = 800;
             dContext.ChildWindow.ReloadDockPanel(new UserControls.UCProducts());
             dContext.ChildWindow.Show();
         }
@@ -77,6 +85,8 @@ namespace com.Logiphix.PPMS
         {
             dContext.CreateChildWindow();
             dContext.ChildWindow.Title = "New Pack";
+            dContext.ChildWindow.Height = 500;
+            dContext.ChildWindow.Width = 800;
             dContext.ChildWindow.ReloadDockPanel(new UserControls.UCPack());
             dContext.ChildWindow.Show();
         }
@@ -125,6 +135,7 @@ namespace com.Logiphix.PPMS
 
         private void Window_Closed(object sender, EventArgs e)
         {
+            dContext.CloseServerConnection();
             Application.Current.Shutdown();
         }
 

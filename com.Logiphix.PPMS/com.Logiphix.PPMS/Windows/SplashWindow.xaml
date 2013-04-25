@@ -1,0 +1,13 @@
+﻿<Window x:Class="com.Logiphix.PPMS.Windows.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SplashWindow" Height="Auto" Width="Auto" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" >
+    <Grid>
+        <StackPanel Grid.ColumnSpan="2">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="..\\Images\\SplashScreen_Nozzle.jpg"></ImageBrush>
+            </StackPanel.Background>
+            <Image   Width="Auto" Height="Auto" Source="..\\Images\\SplashScreen_Nozzle.jpg" Name="image1" />
+        </StackPanel>
+    </Grid>
+</Window>

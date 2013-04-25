@@ -60,6 +60,8 @@
     </Compile>
     <Compile Include="Common\ExecCommand.cs" />
     <Compile Include="Common\Utility.cs" />
+    <Compile Include="Model\DriverModel.cs" />
+    <Compile Include="Model\ProductsModel.cs" />
     <Compile Include="UserControls\UCCreditFuelSales.xaml.cs">
       <DependentUpon>UCCreditFuelSales.xaml</DependentUpon>
     </Compile>
@@ -95,6 +97,10 @@
     </Compile>
     <Compile Include="ViewModel\DriverViewModel.cs" />
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\ProductsViewModel.cs" />
+    <Compile Include="Windows\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="ChildWindowHelper.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UCTank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SplashWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

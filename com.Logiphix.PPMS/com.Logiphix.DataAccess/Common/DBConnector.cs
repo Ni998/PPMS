@@ -8,21 +8,52 @@ namespace com.Logiphix.DataAccess.Common
 {
     public class DBConnector
     {
+        internal static OdbcConnection connection{get;set;}
+
         static private OdbcConnection Connect(String _userName, String _passwd)
         {
-            string ConString = "DRIVER={MySQL ODBC 5.1 Driver};" + "SERVER=localhost;" + "DATABASE=fuelfetch;" + "UID=" + _userName + ";" + "PASSWORD=" + _passwd + ";";// +"OPTION=3";
-            OdbcConnection Connection = new OdbcConnection(ConString);
-            Connection.Open();
-            return (Connection.State == System.Data.ConnectionState.Open ? Connection : null);
+            try
+            {
+                string ConString = "DRIVER={MySQL ODBC 5.2a Driver};" + "SERVER=localhost;" + "DATABASE=fuelfetch;" + "UID=" + _userName + ";" + "PASSWORD=" + _passwd + ";";// +"OPTION=3";
+                OdbcConnection Connection = new OdbcConnection(ConString);
+                Connection.Open();
+                return (Connection.State == System.Data.ConnectionState.Open ? Connection : null);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        static public OdbcConnection OpenConnection()
+
+        #region Public
+
+        static public OdbcConnection GetConnection()
         {
-            return Connect("root", "Deepa");
+            return connection;
         }
-        static public OdbcConnection CloseConnection()
+
+        static public bool OpenConnection()
         {
-            return Connect("root", "Deepa");
+            connection = Connect("root", "deepa");
+            return ((connection != null && connection.State == System.Data.ConnectionState.Open) ? true : false);
         }
+        static public bool CloseConnection()
+        {
+            try
+            {
+                if (connection != null && connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        #endregion
     }
 }

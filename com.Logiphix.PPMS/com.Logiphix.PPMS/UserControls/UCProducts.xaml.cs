@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using com.Logiphix.PPMS.ViewModel;
 
 namespace com.Logiphix.PPMS.UserControls
 {
@@ -19,8 +20,12 @@ namespace com.Logiphix.PPMS.UserControls
     /// </summary>
     public partial class UCProducts : UserControl
     {
+        ProductsViewModel dContext;
+
         public UCProducts()
         {
+            dContext = new ProductsViewModel();
+            this.DataContext = dContext;
             InitializeComponent();
         }
 
